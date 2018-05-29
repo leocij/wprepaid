@@ -107,6 +107,7 @@ public class ReferenciaNode {
         TableView<Referencia> tableView = new TableView<>();
         tableView.getColumns().clear();
         tableView.setItems(list);
+        tableView.getColumns().addAll(referenciaColuna);
 
         return tableView;
     }

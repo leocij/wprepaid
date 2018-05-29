@@ -11,6 +11,10 @@ public class BibliotecaString {
     }
 
     public String createReferenciaTable() {
-        return "create table if not exists referencia (id integer identity primary key, referencia varchar(100))";
+        return "CREATE TABLE IF NOT EXISTS REFERENCIA (ID INTEGER IDENTITY PRIMARY KEY, REFERENCIA VARCHAR(100))";
+    }
+
+    public String createTipoProdutoTable() {
+        return "CREATE TABLE IF NOT EXISTS TIPO_PRODUTO (ID INTEGER IDENTITY PRIMARY KEY, TIPO_PRODUTO VARCHAR(100))";
     }
 }

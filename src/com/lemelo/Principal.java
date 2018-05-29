@@ -2,6 +2,7 @@ package com.lemelo;
 
 import com.lemelo.novo_cartao.NovoCartaoNode;
 import com.lemelo.referencia.ReferenciaNode;
+import com.lemelo.tipo_produto.TipoProdutoNode;
 import com.lemelo.util.FabricaConexao;
 import javafx.application.Application;
 import javafx.geometry.Side;
@@ -37,6 +38,13 @@ public class Principal extends Application {
         referenciaTab.setClosable(false);
         referenciaTab.setContent(new ReferenciaNode().executar(referenciaTab));
         tabPane.getTabs().add(referenciaTab);
+
+        Tab tipoProdutoTab = new Tab();
+        tipoProdutoTab.setText("Tipo Produto");
+        tipoProdutoTab.setStyle("-fx-font: normal bold 15px 'verdana' ");
+        tipoProdutoTab.setClosable(false);
+        tipoProdutoTab.setContent(new TipoProdutoNode().executar(tipoProdutoTab));
+        tabPane.getTabs().add(tipoProdutoTab);
 
         Integer WIDTH_TAM = 940;
         Integer HEIGHT_TAM = 680;

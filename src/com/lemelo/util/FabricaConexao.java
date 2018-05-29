@@ -10,6 +10,7 @@ public class FabricaConexao {
             connection = DriverManager.getConnection(new BibliotecaString().urlBanco(),"SA","");
             statement = connection.createStatement();
             statement.executeUpdate(new BibliotecaString().createReferenciaTable());
+            statement.executeUpdate(new BibliotecaString().createTipoProdutoTable());
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
