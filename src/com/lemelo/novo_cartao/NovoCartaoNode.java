@@ -52,22 +52,22 @@ public class NovoCartaoNode {
 
         Text statusCpfLabel = new Text("Status CPF: ");
         TextField statusCpfTextField = new TextField();
-        cpfLabel.setStyle("-fx-font: normal bold 15px 'verdana' ");
-        cpfTextField.setPrefWidth(5000);
+        statusCpfLabel.setStyle("-fx-font: normal bold 15px 'verdana' ");
+        statusCpfTextField.setPrefWidth(5000);
         gridPane.add(statusCpfLabel, 0, 2);
         gridPane.add(statusCpfTextField, 0, 3);
 
         Text matriculaLabel = new Text("Matrícula: ");
         TextField matriculaTextField = new TextField();
-        cpfLabel.setStyle("-fx-font: normal bold 15px 'verdana' ");
-        cpfTextField.setPrefWidth(5000);
+        matriculaLabel.setStyle("-fx-font: normal bold 15px 'verdana' ");
+        matriculaTextField.setPrefWidth(5000);
         gridPane.add(matriculaLabel, 0, 4);
         gridPane.add(matriculaTextField, 0, 5);
 
-        Text nomeLabel = new Text("CPF: ");
+        Text nomeLabel = new Text("Nome: ");
         TextField nomeTextField = new TextField();
-        cpfLabel.setStyle("-fx-font: normal bold 15px 'verdana' ");
-        cpfTextField.setPrefWidth(5000);
+        nomeLabel.setStyle("-fx-font: normal bold 15px 'verdana' ");
+        nomeTextField.setPrefWidth(5000);
         gridPane.add(nomeLabel, 0, 6);
         gridPane.add(nomeTextField, 0, 7);
 

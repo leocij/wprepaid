@@ -1,6 +1,8 @@
 package com.lemelo;
 
 import com.lemelo.novo_cartao.NovoCartaoNode;
+import com.lemelo.referencia.ReferenciaNode;
+import com.lemelo.util.FabricaConexao;
 import javafx.application.Application;
 import javafx.geometry.Side;
 import javafx.scene.Scene;
@@ -11,7 +13,9 @@ import javafx.stage.Stage;
 
 public class Principal extends Application {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ClassNotFoundException {
+        Class.forName("org.hsqldb.jdbcDriver");
+        new FabricaConexao().createTables();
         launch(args);
     }
 
@@ -26,6 +30,13 @@ public class Principal extends Application {
         novoCartaoTab.setClosable(false);
         novoCartaoTab.setContent(new NovoCartaoNode().executar(novoCartaoTab));
         tabPane.getTabs().add(novoCartaoTab);
+
+        Tab referenciaTab = new Tab();
+        referenciaTab.setText("Referências");
+        referenciaTab.setStyle("-fx-font: normal bold 15px 'verdana' ");
+        referenciaTab.setClosable(false);
+        referenciaTab.setContent(new ReferenciaNode().executar(referenciaTab));
+        tabPane.getTabs().add(referenciaTab);
 
         Integer WIDTH_TAM = 940;
         Integer HEIGHT_TAM = 680;
