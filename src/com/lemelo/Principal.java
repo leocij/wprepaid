@@ -46,6 +46,13 @@ public class Principal extends Application {
         tipoProdutoTab.setContent(new TipoProdutoNode().executar(tipoProdutoTab));
         tabPane.getTabs().add(tipoProdutoTab);
 
+        Tab pedidoTab = new Tab();
+        pedidoTab.setText("Pedidos");
+        pedidoTab.setStyle("-fx-font: normal bold 15px 'verdana' ");
+        pedidoTab.setClosable(false);
+        pedidoTab.setContent(new PedidoNode().executar(pedidoTab));
+        tabPane.getTabs().add(pedidoTab);
+
         Integer WIDTH_TAM = 940;
         Integer HEIGHT_TAM = 680;
         Scene scene = new Scene(tabPane, WIDTH_TAM, HEIGHT_TAM, Color.GRAY);
